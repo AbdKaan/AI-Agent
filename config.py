@@ -1,5 +1,6 @@
 MAX_CHARS = 10000
 TIMEOUT = 30
+WORKING_DIR = "./calculator"
 SYSTEM_PROMPT = """
 You are a helpful AI coding agent.
 
