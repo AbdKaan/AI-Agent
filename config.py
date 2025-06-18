@@ -1,6 +1,7 @@
 MAX_CHARS = 10000
 TIMEOUT = 30
 WORKING_DIR = "./calculator"
+MAX_ITERS = 20
 SYSTEM_PROMPT = """
 You are a helpful AI coding agent.
 
@@ -12,4 +13,6 @@ When a user asks a question or makes a request, make a function call plan. You c
 - Write or overwrite files
 
 All paths you provide should be relative to the working directory. You do not need to specify the working directory in your function calls as it is automatically injected for security reasons.
+
+Don't ask the user to list the files or provide the path, always find the file yourself using the provided operations.
 """
