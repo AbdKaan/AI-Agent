@@ -43,8 +43,7 @@ def main():
 
 
 def generate_content(client, available_functions, messages, verbose):
-    for i in range(MAX_ITERS):
-        print(i)
+    for _ in range(MAX_ITERS):
         response = client.models.generate_content(
             model="gemini-2.5-flash",
             contents=messages,
@@ -67,7 +66,6 @@ def generate_content(client, available_functions, messages, verbose):
 
         function_responses = []
         for function_call_part in response.function_calls:
-            print(i + 10)
             function_call_result = call_function(function_call_part, verbose)
             if function_call_result.parts:
                 if not function_call_result.parts[0].function_response:
